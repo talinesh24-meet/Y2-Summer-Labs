@@ -12,7 +12,7 @@ Config = {
   "messagingSenderId": "58834721290",
   "appId": "1:58834721290:web:562e60a8763676dc6e1df3",
   "measurementId": "G-MPFP3BS75R",
-  "databaseURL": "https://auth-lab-9db17-default-rtdb.firebaseio.com"
+  "databaseURL": "https://auth-lab-9db17-default-rtdb.firebaseio.com/"
 }
 
 firebase = pyrebase.initialize_app(Config)
@@ -57,7 +57,7 @@ def signin():
 @app.route('/signout',methods=['GET', 'POST'])
 def signout():
   auth.signOut()
-  login_session['user'] = None
+  session['user'] = None
   return redirect(url_for('signin'))
 
 
@@ -73,6 +73,8 @@ def home():
 
       return redirect(url_for('thanks'))
     else:
+
+      redirect('signup')
       return render_template("home.html")
 
    
