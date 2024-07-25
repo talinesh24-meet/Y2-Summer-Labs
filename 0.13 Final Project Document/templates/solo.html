@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Preferences</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<header>
+     <nav>
+
+	     <div class="container">
+            <div id="branding">
+                
+                <h1>Explore Your Travel Preferences</h1>
+            <p>Discover destinations based on your preferences and interests.</p>
+            <p style="font-size:40px;  display: flex;
+  justify-content: center;
+  align-items: center;"><img src="{{ url_for('static', filename='logo.png') }}" style="align: left;"width="200"alt="Logo" class="logo">RoamVol</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/27199/file-manager/adventure-tourism.jpg">Home</a></li>
+                    <li><a href="https://wwwnc.cdc.gov/travel/images/mountain-biker.jpg">About</a></li>
+                    <li><a href="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/700-07760424_72dpi.jpg?itok=j2ybTlIN">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</header>
+
+   
+            
+       
+        <section class="preferences">
+            <h2>Choose Your Preferences</h2>
+            <form action="/solo" method="POST">
+                <div class="preference-group">
+                    <label for="continent">Continent:</label>
+                    <select id="continent" name="continent">
+                        <option value="africa">Africa</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="north-america">North America</option>
+                        <option value="south-america">South America</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+                <div class="preference-group">
+                    <label for="activity">Preferred Activity:</label>
+                    <select id="activity" name="activity">
+                        <option value="hiking">Hiking</option>
+                        <option value="beach">Beach</option>
+                        <option value="culture">Cultural Experience</option>
+                        <option value="adventure">Adventure Sports</option>
+                    </select>
+                </div>
+                <div class="preference-group">
+                    <label for="budget">Budget Range:</label>
+                    <select id="budget" name="budget">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+              
+            </form>
+            <a href="/results">  <button type="submit" class="btn">Find Destinations</button></a>
+        </section>
+    </div>
+       <a href="/signout"> <button type="submit" class="btn">Sign out</button></a>
+
+</body>
+</html>

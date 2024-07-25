@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+	<title></title>
+</head>
+<body>
+	<header>
+        <div class="container">
+            <div id="branding">
+                <h1>ROAMVOL</h1>
+                <p style="font-size:40px;  display: flex;
+  justify-content: center;
+  align-items: center;"><img src="{{ url_for('static', filename='logo.png') }}" style="align: left;"width="200"alt="Logo" class="logo">RoamVol</p>
+           </div>
+        </div>
+	<div class="container">
+        <div class="auth-block">
+ </div>
+</div>
+</header>
+<form id="input" action="/signin" method="POST">
+	 <div class="form-group">
+    <input type="email" name="email" id="email" placeholder="Email" class="social-icon">
+    </div>
+    <div class="form-group">
+    <input type="password" name="password" id="password"placeholder="Password" class="social-icon"> 
+    </div>
+    <a href="/home"><button type="submit" class="btn">Sign In</button></a>
+    </div>
+    </div>
+</form>
+
+</body>
+</html>

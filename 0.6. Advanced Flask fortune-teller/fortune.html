@@ -1,4 +1,4 @@
-<html>
+html>
 <html>
 <head>
 	<style>
@@ -16,8 +16,7 @@ p {
 	<title>Welcome to fortune teller page </title>
 </head>
 <body>
-  
- <p>your fortune is:{%for i in possible_fortunes%}
+ <p>your fortune is:{%for i in possible_fortunes()%}
 {{i}}
 {%endfor%}
  </p>

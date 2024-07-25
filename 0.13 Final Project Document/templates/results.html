@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+
+                <h1>Your Travel Recommendations</h1>
+                <p style="font-size:40px;  display: flex;
+  justify-content: center;
+  align-items: center;"><img src="{{ url_for('static', filename='logo.png') }}" style="align: left;"width="200"alt="Logo" class="logo">RoamVol</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/preferences">Preferences</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="results container">
+        <h2>Based on Your Preferences</h2>
+        
+        <div class="result-item">{{
+            <h3>{{ destination1.name }}</h3>
+            <img src="{{ destination1.image_url }}" alt="{{ destination1.name }}" class="destination-image">
+            <p>{{ destination1.description }}</p>
+        </div>
+        <div class="result-item">
+            <h3>{{ destination2.name }}</h3>
+            <img src="{{ destination2.image_url }}" alt="{{ destination2.name }}" class="destination-image">
+            <p>{{ destination2.description }}</p>
+        </div>
+        <div class="result-item">
+            <h3>{{ destination3.name }}</h3>
+            <img src="{{ destination3.image_url }}" alt="{{ destination3.name }}" class="destination-image">
+            <p>{{ destination3.description }}</p>}}
+        </div>
+        
+    </section>
+
+    <a href="/signout"><button type="button" class="btn signout-btn">Sign out</button></a>
+</body>
+</html>

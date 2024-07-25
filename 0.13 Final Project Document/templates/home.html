@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoamVol</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+               
+                <p style="font-size:40px;  display: flex;
+  justify-content: center;
+  align-items: center;"><img src="{{ url_for('static', filename='logo.png') }}" style="align: left;"width="200"alt="Logo" class="logo">RoamVol</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/27199/file-manager/adventure-tourism.jpg">Home</a></li>
+                    <li><a href="https://wwwnc.cdc.gov/travel/images/mountain-biker.jpg">About</a></li>
+                    <li><a href="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/700-07760424_72dpi.jpg?itok=j2ybTlIN">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+<br>
+
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Explore the World</h1>
+            <p>Discover new places, meet new people, and create unforgettable memories.</p>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="content">
+                <div class="card">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2154872027/settings_images/8b3170a-b365-5bc-1522-4b305a828583_sve.jpg" alt="Solo Volunteering Experiences">
+                    <h3>Solo Volunteering Experiences</h3>
+                    <p>The opportunity to travel, volunteer, experience exceptional locations around the world and make a meaningful experience on your own, as a local and not as a tourist.</p>
+                    <a href="/solo" class="read-more">Read more</a>
+                </div>
+                <div class="card">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2154872027/settings_images/a3e0474-c6c-3f3-a436-2b2676f824e_vt.jpg" alt="Volunteering Group Trips">
+                    <h3>Volunteering Group Trips</h3>
+                    <p>The opportunity to travel with a group, volunteer and share a meaningful experience with an expert leader from our team who will guide the group every step of the way. </p>
+                     <a href="/group" class="read-more">Read more</a>
+                </div>
+                <div class="card">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2154872027/settings_images/cadd38-e8b-4b63-621-b7d82ae6d5bd_nt.jpg" alt="Normal Private Trips">
+                    <h3>Normal Private Trips</h3>
+                    <p>The opportunity to travel and share a meaningful experience traveling as a tourist to exceptional locations that we have experienced around the world. </p>
+                    <a href="/private" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <a href="/signout"> <button type="submit" class="btn">Sign out</button></a>
+
+
+    <footer>
+        <p>RoamVol &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
