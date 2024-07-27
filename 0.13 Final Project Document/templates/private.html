@@ -11,15 +11,18 @@
         <div class="container">
             <div id="branding">
                 <h1>Travel Preferences Survey</h1>
+                <p style="font-size:40px;  display: flex;
+  justify-content: center;
+  align-items: center;"><img src="{{ url_for('static', filename='logo.png') }}" style="align: left;"width="200"alt="Logo" class="logo">RoamVol</p>
             </div>
         </div>
     </header>
 
-    <section class="survey-section">
+    <section class="survey-section" >
         <div class="container">
             <div class="survey-block">
                 <h2>Suggested Schemes and Availability</h2>
-                <form action="/submit_survey" method="POST">
+                <form action="/results" method="POST">
                     <div class="form-group">
                         <label for="destination">Preferred Destination:</label>
                         <select id="destination" name="destination">
@@ -52,14 +55,15 @@
                             <input type="radio" id="family" name="travel_style" value="family">Family
                         </div>
                     </div>
-                  <a href="/submit_survey">  <button type="submit" class="btn">Submit Preferences</button></a>
+                   <button type="submit" class="btn">Submit Preferences</button>
 
                 </form>
             </div>
         </div>
     </section>
-
+<a href="/signout"> <button type="submit" class="btn">Sign out</button></a>
     <footer>
+
         <p>Travel Preferences Survey &copy; 2024</p>
     </footer>
 </body>

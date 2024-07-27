@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Preferences</title>
+    <title>Volunteering Preferences</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -35,14 +35,13 @@
        
         <section class="preferences">
             <h2>Choose Your Preferences</h2>
-            <form action="/solo" method="POST">
+            <form action="/results" method="POST">
                 <div class="preference-group">
                     <label for="continent">Continent:</label>
                     <select id="continent" name="continent">
                         <option value="africa">Africa</option>
                         <option value="asia">Asia</option>
                         <option value="europe">Europe</option>
-                        <option value="north-america">North America</option>
                         <option value="south-america">South America</option>
                         <option value="australia">Australia</option>
                     </select>
@@ -54,6 +53,9 @@
                         <option value="beach">Beach</option>
                         <option value="culture">Cultural Experience</option>
                         <option value="adventure">Adventure Sports</option>
+                        <option value="chilling">Chilling</option>
+                        <option value="coast">Coast</option>
+
                     </select>
                 </div>
                 <div class="preference-group">
@@ -64,9 +66,9 @@
                         <option value="high">High</option>
                     </select>
                 </div>
-              
+               <button type="submit" class="btn">Find Destinations</button>
             </form>
-            <a href="/results">  <button type="submit" class="btn">Find Destinations</button></a>
+            
         </section>
     </div>
        <a href="/signout"> <button type="submit" class="btn">Sign out</button></a>
